@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-        <el-radio-button :label="false">展开</el-radio-button>
-        <el-radio-button :label="true">收起</el-radio-button>
-    </el-radio-group> -->
     <el-menu router :default-active="activeMenu" active-text-color="#409EFF" class="el-menu-vertical-demo"
       @open="handleOpen" @close="handleClose" :collapse="isCollapse">
       <menu-item v-for="item in routes" :key="item.path" :route="item" :base-path="item.path" />

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- 当根路由中的children只包含一个路由信息时 -->
         <template
             v-if="hasOneShowingChild(route.children, route) && (!onlyOneChild.children || onlyOneChild.noShowingChildren)">
             <el-menu-item :index="resolvePath(onlyOneChild.path)">
@@ -7,6 +8,7 @@
                 <span>{{ onlyOneChild.meta.title }}</span>
             </el-menu-item>
         </template>
+        <!-- 当根路由中的children包含多个路由信息时 -->
         <el-submenu v-else :index="resolvePath(route.path)">
             <template slot="title">
                 <i v-if="route.meta && route.meta.icon" :class="route.meta.icon"></i>
@@ -58,7 +60,7 @@ export default {
                 return true
             }
 
-            // Show parent if there are no child router to display
+            // 没有子路由，只有父路由
             if (showingChildren.length === 0) {
                 this.onlyOneChild = { ...parent, path: '', noShowingChildren: true }
                 return true
@@ -72,6 +74,7 @@ export default {
             if (/^(https?:|mailto:|tel:)/.test(this.basePath)) {
                 return this.basePath
             }
+            // 拼接路由地址
             return path.resolve(this.basePath, routePath)
         }
     },

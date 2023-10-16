@@ -1,29 +1,30 @@
 <template>
     <div>
-        cccc
+        <Breadcrumb />
     </div>
 </template>
 
 <script>
+import Breadcrumb from "@/components/Breadcrumb"
 export default {
-    name: 'Ac',
-
+    name: 'Navbar',
+    components: {
+        Breadcrumb
+    },
     data() {
         return {
-            
+
         };
     },
 
     mounted() {
-        
+
     },
 
     methods: {
-        
+
     },
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
