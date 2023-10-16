@@ -3,17 +3,21 @@
         <!-- 侧边菜单栏 -->
         <SideMenuBar />
         <!-- 内容区域 -->
-        <keep-alive>
+        <div class="app_contet">
+            <div>
+                <Navbar />
+            </div>
             <router-view :key="key" />
-        </keep-alive>
+        </div>
     </div>
 </template>
 
 <script>
 import SideMenuBar from "@/Layout/components/SideMenuBar"
+import Navbar from "@/Layout/components/Navbar"
 export default {
     name: 'Index',
-    components: { SideMenuBar },
+    components: { SideMenuBar, Navbar },
     data() {
         return {
 
@@ -44,5 +48,11 @@ export default {
     flex-direction: row;
     justify-content: start;
     background-color: #ffffff;
+
+    .app_contet {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 </style>
