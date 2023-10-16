@@ -1,12 +1,16 @@
 <template>
     <div>
-        <router-view/>
+        aIndex
+        <!-- <el-alert :closable="false" title="aIndex"> -->
+            <router-view />
+        <!-- </el-alert> -->
+        <!-- <router-view /> -->
     </div>
 </template>
 
 <script>
 export default {
-    name: 'A',
+    name: 'AIndex',
 
     data() {
         return {

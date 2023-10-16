@@ -8,11 +8,10 @@ const routes = [
     children: [
       {
         path: "index",
-        name: "index",
+        name: "Index",
         meta: {
           title: "首页",
           icon: "el-icon-s-home",
-          activeMenu: "/index",
         },
         component: () => import("@/views/index.vue"),
       },
@@ -36,7 +35,7 @@ const routes = [
   },
   {
     path: "/about",
-    name: "about",
+    // name: "About",
     redirect: "/about/about1",
     meta: {
       title: "About",
@@ -46,7 +45,7 @@ const routes = [
     children: [
       {
         path: "about1",
-        name: "about",
+        name: "About1",
         meta: {
           title: "About1",
         },
@@ -54,7 +53,7 @@ const routes = [
       },
       {
         path: "aIndex",
-        name: "aIndex",
+        name: "AIndex",
         meta: {
           title: "aIndex",
         },
@@ -62,7 +61,7 @@ const routes = [
         children: [
           {
             path: "aa",
-            name: "aa",
+            name: "Aa",
             meta: {
               title: "aa",
               // icon: "el-icon-s-home",
@@ -71,7 +70,7 @@ const routes = [
           },
           {
             path: "ac",
-            name: "ac",
+            name: "Ac",
             meta: {
               title: "ac",
               // icon: "el-icon-s-home",
