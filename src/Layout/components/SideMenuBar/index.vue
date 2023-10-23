@@ -41,15 +41,6 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
-    isNoChildrenMenuShow(item) {
-      if (!item.children || item.children.length === 0) {
-        if (item.meta) {
-          return !item.meta.hideInMenu;
-        }
-        return true;
-      }
-      return false;
-    },
   },
 };
 </script>
