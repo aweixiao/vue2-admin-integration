@@ -11,22 +11,22 @@ const routes = [
         name: "Index",
         meta: {
           title: "首页",
-          icon: "el-icon-s-home",
+          icon: "home_page",
         },
         component: () => import("@/views/index.vue"),
       },
     ],
   },
   {
-    path: "/home",
+    path: "/",
     component: Layout,
     children: [
       {
-        path: "index",
+        path: "home ",
         name: "Home",
         meta: {
           title: "Home",
-          icon: "el-icon-s-home",
+          icon: "home_page",
           needCache: true,
         },
         component: () => import("@/views/Home/index.vue"),
@@ -39,7 +39,7 @@ const routes = [
     redirect: "/about/about1",
     meta: {
       title: "About",
-      icon: "el-icon-s-home",
+      icon: "home_page",
     },
     component: Layout,
     children: [
@@ -48,14 +48,17 @@ const routes = [
         name: "About1",
         meta: {
           title: "About1",
+          icon: "",
         },
         component: () => import("@/views/About/index.vue"),
       },
       {
-        path: "aIndex",
+        path: "/aIndex/aa",
+        // redirect: "/aIndex/aa",
         name: "AIndex",
         meta: {
           title: "aIndex",
+          icon: "",
         },
         component: () => import("@/views/A/index.vue"),
         children: [
@@ -64,7 +67,7 @@ const routes = [
             name: "Aa",
             meta: {
               title: "aa",
-              // icon: "el-icon-s-home",
+              icon: "",
             },
             component: () => import("@/views/A/A.vue"),
           },
@@ -73,7 +76,7 @@ const routes = [
             name: "Ac",
             meta: {
               title: "ac",
-              // icon: "el-icon-s-home",
+              icon: "",
               needCache: true,
             },
             component: () => import("@/views/A/C.vue"),
@@ -83,15 +86,15 @@ const routes = [
     ],
   },
   {
-    path: "/todos",
+    path: "/",
     component: Layout,
     children: [
       {
-        path: "index",
+        path: "todos",
         name: "Todos",
         meta: {
           title: "Todos",
-          icon: "el-icon-s-home",
+          icon: "home_page",
         },
         component: () => import("@/views/Todos/index.vue"),
       },
